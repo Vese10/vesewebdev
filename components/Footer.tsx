@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 import { Mail, Phone, MapPin, Github, Linkedin, Instagram, Facebook } from "lucide-react";
 
@@ -7,7 +9,7 @@ export default function Footer() {
   return (
     <footer className="flex items-center justify-center relative overflow-hidden bg-gradient-to-tr from-gray-300 via-black to-gray-300">
       <div className="container mx-auto px-4 max-w-6xl py-12">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           {/* Brand Section */}
           <div className="space-y-4">
             <h3 className="text-2xl font-bold gradient-text font-poppins">
@@ -56,6 +58,43 @@ export default function Footer() {
                 >
                   Contatti
                 </a>
+              </li>
+            </ul>
+          </div>
+
+          {/* Legale */}
+          <div>
+            <h4 className="text-lg font-semibold text-white mb-4">Legale</h4>
+            <ul className="text-white space-y-2">
+              <li>
+                <Link
+                  href="/privacy-policy"
+                  className="hover:text-primary transition-colors duration-200"
+                >
+                  Privacy Policy
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/cookie-policy"
+                  className="hover:text-primary transition-colors duration-200"
+                >
+                  Cookie Policy
+                </Link>
+              </li>
+              <li>
+                <button
+                  onClick={() => {
+                    // @ts-ignore - Cookiebot global function
+                    if (typeof window !== "undefined" && window.Cookiebot) {
+                      // @ts-ignore
+                      window.Cookiebot.renew();
+                    }
+                  }}
+                  className="hover:text-primary transition-colors duration-200 text-left"
+                >
+                  Impostazioni Cookie
+                </button>
               </li>
             </ul>
           </div>

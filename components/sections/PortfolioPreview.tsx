@@ -107,7 +107,7 @@ export default function PortfolioPreview() {
         >
           <Link
             href="/portfolio"
-            className="group bg-primary text-black px-8 py-4 rounded-full font-medium text-lg hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 flex justify-center items-center space-x-2 w-1/4"
+            className="group bg-primary text-black px-8 py-4 rounded-full font-medium text-lg hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 flex justify-center items-center space-x-2 w-full md:w-1/4"
           >
             <span>Vedi Tutti i Progetti</span>
             <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />

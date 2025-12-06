@@ -66,14 +66,14 @@ export default function Hero() {
           >
             <a
               href="#contatti"
-              className="group bg-primary text-black px-8 py-4 rounded-full font-medium text-lg hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 flex justify-center items-center space-x-2 w-1/4"
+              className="group bg-primary text-black px-8 py-4 rounded-full font-medium text-lg hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 flex justify-center items-center space-x-2 w-full md:w-1/4"
             >
               <span>Iniziamo a Collaborare</span>
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </a>
             <a
               href="#portfolio"
-              className="group bg-primary text-black px-8 py-4 rounded-full font-medium text-lg hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 flex justify-center items-center space-x-2 w-1/4"
+              className="group bg-primary text-black px-8 py-4 rounded-full font-medium text-lg hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 flex justify-center items-center space-x-2 w-full md:w-1/4"
             >
               <span>Vedi i Miei Progetti</span>
               <Code className="w-5 h-5" />
@@ -109,7 +109,7 @@ export default function Hero() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1, delay: 1 }}
-        className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
+        className="absolute bottom-1 md:bottom-8 left-1/2 transform -translate-x-1/2"
       >
         <a href="#chi-sono" className="flex flex-col items-center animate-bounce">
           <div className="w-6 h-10 border-2 border-gray-400 rounded-full flex justify-center">

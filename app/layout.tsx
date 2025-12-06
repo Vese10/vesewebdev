@@ -123,6 +123,13 @@ export default function RootLayout({
             }),
           }}
         />
+
+        {/* Usercentrics Cookie Consent Management */}
+        {/* 
+          IMPORTANT: Replace 'YOUR_SETTINGS_ID_HERE' with your actual Usercentrics Settings ID
+          Find it in: Usercentrics Dashboard → Implementation → Web
+        */}
+        <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="2e91db8f-dea5-489a-b32c-d645d6f1fa38" type="text/javascript"></script>
       </head>
       <body className="font-sans antialiased">
         <Navbar />
