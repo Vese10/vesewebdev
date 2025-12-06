@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
 import { User, Target, Lightbulb, Heart } from "lucide-react";
+import Image from "next/image";
 
 export default function ChiSono() {
   const ref = useRef(null);
@@ -13,7 +14,7 @@ export default function ChiSono() {
     <section
       id="chi-sono"
       ref={ref}
-      className="bg-white"
+      className="min-h-screen flex items-center justify-center relative overflow-hidden bg-gradient-to-tr from-gray-300 via-black to-gray-300"
     >
       <div className="container mx-auto px-4 max-w-6xl">
         <motion.div
@@ -22,7 +23,7 @@ export default function ChiSono() {
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 font-poppins mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-white font-poppins mb-4">
             Chi Sono
           </h2>
           <div className="w-24 h-1 bg-gradient-primary mx-auto rounded-full"></div>
@@ -37,14 +38,12 @@ export default function ChiSono() {
             className="relative"
           >
             <div className="aspect-square rounded-2xl bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center">
-              <User className="w-64 h-64 text-primary/30" />
-              {/* Replace with actual image: */}
-              {/* <Image src="/profile.jpg" alt="Profile" fill className="object-cover rounded-2xl" /> */}
+              <Image src="/profile.jpg" alt="Profile" fill className="object-cover rounded-2xl" />
             </div>
-            <div className="absolute -bottom-6 -right-6 bg-white p-4 rounded-xl shadow-lg">
+            <div className="absolute -bottom-6 -right-6 bg-white p-4 rounded-xl shadow-lg border border-gray-700">
               <div className="flex items-center space-x-2">
                 <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse" />
-                <span className="text-sm font-medium">Disponibile per progetti</span>
+                <span className="text-sm font-medium text-primary">Disponibile per progetti</span>
               </div>
             </div>
           </motion.div>
@@ -57,16 +56,16 @@ export default function ChiSono() {
             className="space-y-6"
           >
             <div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">
-                Ciao! Sono un{" "}
+              <h3 className="text-2xl font-bold text-white mb-4">
+                Ciao, sono Veselin!<br />Sono un{" "}
                 <span className="gradient-text">Programmatore Freelance</span>
               </h3>
-              <p className="text-gray-600 leading-relaxed mb-4">
+              <p className="text-white leading-relaxed mb-4">
                 Sono specializzato nello sviluppo di soluzioni web moderne e performanti.
-                Con oltre 5 anni di esperienza, aiuto aziende, privati e web agency a
+                Con oltre 2 anni di esperienza, aiuto aziende, privati e web agency a
                 trasformare le loro idee in prodotti digitali di successo.
               </p>
-              <p className="text-gray-600 leading-relaxed">
+              <p className="text-white leading-relaxed">
                 Lavoro principalmente nelle zone di{" "}
                 <span className="font-semibold text-primary">Ferrara</span> e{" "}
                 <span className="font-semibold text-primary">Bologna</span>, ma sono
@@ -100,12 +99,12 @@ export default function ChiSono() {
               ].map((feature, index) => (
                 <div
                   key={index}
-                  className="flex items-start space-x-3 p-4 rounded-lg hover:bg-gray-50 transition-colors"
+                  className="flex items-start space-x-3 p-4 rounded-lg hover:bg-gray-700 transition-colors bg-white border border-gray-800"
                 >
                   <feature.icon className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
                   <div>
-                    <h4 className="font-semibold text-gray-900">{feature.title}</h4>
-                    <p className="text-sm text-gray-600">{feature.description}</p>
+                    <h4 className="font-semibold text-primary">{feature.title}</h4>
+                    <p className="text-sm text-gray-300">{feature.description}</p>
                   </div>
                 </div>
               ))}

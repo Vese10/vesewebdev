@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
-import Link from "next/link";
-import { ArrowLeft, Code2, Users, Briefcase, TrendingUp, CheckCircle, Award, Target, Rocket } from "lucide-react";
+import { Code2, Users, Briefcase, TrendingUp, CheckCircle, Award, Target, Rocket } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Collaborazioni Web Agency | Sviluppatore Freelance Ferrara Bologna",
@@ -23,7 +22,6 @@ export default function WebAgencyPage() {
         "React & Next.js",
         "TypeScript",
         "Tailwind CSS",
-        "Vue.js",
         "Responsive Design",
         "Performance Optimization",
       ],
@@ -32,7 +30,6 @@ export default function WebAgencyPage() {
       category: "Backend",
       skills: [
         "Node.js & Express",
-        "Python & Django",
         "REST & GraphQL APIs",
         "Database Design",
         "Authentication & Security",
@@ -43,18 +40,17 @@ export default function WebAgencyPage() {
       category: "Tools & Workflow",
       skills: [
         "Git & GitHub",
-        "CI/CD Pipelines",
-        "Docker",
-        "Agile/Scrum",
-        "Testing (Jest, Cypress)",
+        "Figma",
+        "Canva",
+        "ClickUp",
         "Documentazione Tecnica",
       ],
     },
     {
       category: "Specializzazioni",
       skills: [
+        "Web Sites a codice e Wordpress",
         "Web App Complesse",
-        "E-commerce",
         "SaaS Platforms",
         "AI Integration",
         "Real-time Applications",
@@ -111,21 +107,9 @@ export default function WebAgencyPage() {
 
   return (
     <div className="min-h-screen">
-      {/* Breadcrumb */}
-      <div className="bg-gray-50 py-4 border-b">
-        <div className="container mx-auto px-4 max-w-6xl">
-          <Link
-            href="/"
-            className="inline-flex items-center text-gray-600 hover:text-primary transition-colors"
-          >
-            <ArrowLeft className="w-4 h-4 mr-2" />
-            Torna alla Home
-          </Link>
-        </div>
-      </div>
 
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-purple-600 via-purple-700 to-pink-600 text-white py-20">
+      <section className="bg-gradient-to-br from-primary via-primary-dark to-accent text-white py-20 mt-20">
         <div className="container mx-auto px-4 max-w-6xl">
           <div className="max-w-3xl">
             <h1 className="text-5xl md:text-6xl font-bold mb-6 font-poppins">
@@ -137,13 +121,13 @@ export default function WebAgencyPage() {
             <div className="flex flex-wrap gap-4">
               <a
                 href="#contatti"
-                className="inline-block bg-white text-purple-600 px-8 py-4 rounded-full font-medium hover:shadow-2xl hover:-translate-y-1 transition-all duration-300"
+                className="inline-block bg-black text-white px-8 py-4 rounded-full font-medium hover:shadow-2xl hover:-translate-y-1 transition-all duration-300"
               >
                 Iniziamo a Collaborare
               </a>
               <a
                 href="/#portfolio"
-                className="inline-block border-2 border-white text-white px-8 py-4 rounded-full font-medium hover:bg-white hover:text-purple-600 transition-all duration-300"
+                className="inline-block bg-black text-white px-8 py-4 rounded-full font-medium hover:shadow-2xl hover:-translate-y-1 transition-all duration-300"
               >
                 Vedi Portfolio
               </a>
@@ -153,7 +137,7 @@ export default function WebAgencyPage() {
       </section>
 
       {/* Competenze Tecniche */}
-      <section className="py-20 bg-white">
+      <section className="min-h-screen flex items-center justify-center relative overflow-hidden bg-gradient-to-br from-gray-300 via-black to-gray-300">
         <div className="container mx-auto px-4 max-w-6xl">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4 font-poppins">
@@ -168,14 +152,14 @@ export default function WebAgencyPage() {
             {competenze.map((comp, index) => (
               <div
                 key={index}
-                className="bg-gray-50 rounded-xl p-6 hover:shadow-lg transition-shadow"
+                className="bg-white rounded-xl p-6 hover:shadow-lg transition-shadow"
               >
-                <h3 className="text-xl font-bold text-gray-900 mb-4 border-b border-gray-200 pb-2">
+                <h3 className="text-xl font-bold text-black mb-4 border-b border-gray-200 pb-2">
                   {comp.category}
                 </h3>
                 <ul className="space-y-2">
                   {comp.skills.map((skill, idx) => (
-                    <li key={idx} className="flex items-start text-gray-700">
+                    <li key={idx} className="flex items-start text-gray-300">
                       <CheckCircle className="w-4 h-4 text-primary mr-2 flex-shrink-0 mt-0.5" />
                       <span className="text-sm">{skill}</span>
                     </li>
@@ -188,7 +172,7 @@ export default function WebAgencyPage() {
       </section>
 
       {/* Tipi di Collaborazione */}
-      <section className="py-20 bg-gray-50">
+      <section className="min-h-screen flex items-center justify-center relative overflow-hidden bg-gradient-to-tr from-gray-300 via-black to-gray-300">
         <div className="container mx-auto px-4 max-w-6xl">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4 font-poppins">
@@ -206,14 +190,14 @@ export default function WebAgencyPage() {
                 className="bg-white rounded-xl p-8 shadow-md hover:shadow-xl transition-shadow"
               >
                 <div className="flex items-start space-x-4">
-                  <div className="w-14 h-14 bg-gradient-to-br from-purple-500 to-pink-500 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <type.icon className="w-7 h-7 text-white" />
+                  <div className="w-14 h-14 bg-gradient-to-r from-yellow-500 to-amber-400 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <type.icon className="w-7 h-7 text-black" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold text-gray-900 mb-2">
+                    <h3 className="text-xl font-bold text-black mb-2">
                       {type.title}
                     </h3>
-                    <p className="text-gray-600">{type.description}</p>
+                    <p className="text-gray-300">{type.description}</p>
                   </div>
                 </div>
               </div>
@@ -223,7 +207,7 @@ export default function WebAgencyPage() {
       </section>
 
       {/* Vantaggi */}
-      <section className="py-20 bg-white">
+      <section className="min-h-screen flex items-center justify-center relative overflow-hidden bg-gradient-to-br from-gray-300 via-black to-gray-300">
         <div className="container mx-auto px-4 max-w-6xl">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4 font-poppins">
@@ -234,10 +218,10 @@ export default function WebAgencyPage() {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {benefits.map((benefit, index) => (
               <div key={index} className="text-center">
-                <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <benefit.icon className="w-8 h-8 text-white" />
+                <div className="w-16 h-16 bg-gradient-to-r from-yellow-500 to-amber-400 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <benefit.icon className="w-8 h-8 text-black" />
                 </div>
-                <h3 className="text-lg font-bold text-gray-900 mb-2">
+                <h3 className="text-lg font-bold text-white mb-2">
                   {benefit.title}
                 </h3>
                 <p className="text-gray-600 text-sm">{benefit.description}</p>
@@ -248,7 +232,7 @@ export default function WebAgencyPage() {
       </section>
 
       {/* Processo di Collaborazione */}
-      <section className="py-20 bg-gray-50">
+      <section className="min-h-screen flex items-center justify-center relative overflow-hidden bg-gradient-to-tr from-gray-300 via-black to-gray-300">
         <div className="container mx-auto px-4 max-w-6xl">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4 font-poppins">
@@ -288,14 +272,14 @@ export default function WebAgencyPage() {
                 key={index}
                 className="flex items-start space-x-4 bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow"
               >
-                <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full flex items-center justify-center flex-shrink-0 text-white font-bold text-lg">
+                <div className="w-12 h-12 bg-gradient-to-r from-yellow-500 to-amber-400 rounded-full flex items-center justify-center flex-shrink-0 text-black font-bold text-lg">
                   {item.step}
                 </div>
                 <div>
-                  <h3 className="text-lg font-bold text-gray-900 mb-1">
+                  <h3 className="text-lg font-bold text-black mb-1">
                     {item.title}
                   </h3>
-                  <p className="text-gray-600">{item.description}</p>
+                  <p className="text-gray-300">{item.description}</p>
                 </div>
               </div>
             ))}
@@ -304,7 +288,7 @@ export default function WebAgencyPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-20 bg-gradient-to-br from-purple-600 to-pink-600 text-white">
+      <section className="bg-gradient-to-br from-primary via-primary-dark to-accent text-white py-20">
         <div className="container mx-auto px-4 max-w-4xl text-center">
           <h2 className="text-4xl font-bold mb-6 font-poppins">
             Cerchi un Partner Affidabile?
@@ -314,7 +298,7 @@ export default function WebAgencyPage() {
           </p>
           <a
             href="/#contatti"
-            className="inline-block bg-white text-purple-600 px-8 py-4 rounded-full font-medium hover:shadow-2xl hover:-translate-y-1 transition-all duration-300"
+            className="inline-block bg-black text-white px-8 py-4 rounded-full font-medium hover:shadow-2xl hover:-translate-y-1 transition-all duration-300"
           >
             Contattami per una Call
           </a>

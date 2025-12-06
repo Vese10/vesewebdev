@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
-import Link from "next/link";
-import { ArrowLeft, Globe, Database, Code2, Brain, CheckCircle, Clock, Users, Zap } from "lucide-react";
+import { Globe, Database, Code2, Brain, CheckCircle, Clock, Users, Zap } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Servizi per Aziende e Privati | Sviluppo Web Ferrara Bologna",
@@ -115,21 +114,9 @@ export default function AziendePrivatiPage() {
 
   return (
     <div className="min-h-screen">
-      {/* Breadcrumb */}
-      <div className="bg-gray-50 py-4 border-b">
-        <div className="container mx-auto px-4 max-w-6xl">
-          <Link
-            href="/"
-            className="inline-flex items-center text-gray-600 hover:text-primary transition-colors"
-          >
-            <ArrowLeft className="w-4 h-4 mr-2" />
-            Torna alla Home
-          </Link>
-        </div>
-      </div>
 
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-primary via-primary-dark to-accent text-white py-20">
+      <section className="bg-gradient-to-br from-primary via-primary-dark to-accent text-white py-20 mt-20">
         <div className="container mx-auto px-4 max-w-6xl">
           <div className="max-w-3xl">
             <h1 className="text-5xl md:text-6xl font-bold mb-6 font-poppins">
@@ -140,7 +127,7 @@ export default function AziendePrivatiPage() {
             </p>
             <a
               href="#contatti"
-              className="inline-block bg-white text-primary px-8 py-4 rounded-full font-medium hover:shadow-2xl hover:-translate-y-1 transition-all duration-300"
+              className="inline-block bg-black text-white px-8 py-4 rounded-full font-medium hover:shadow-2xl hover:-translate-y-1 transition-all duration-300"
             >
               Richiedi un Preventivo Gratuito
             </a>
@@ -149,7 +136,7 @@ export default function AziendePrivatiPage() {
       </section>
 
       {/* Services Grid */}
-      <section className="py-20 bg-white">
+      <section className="min-h-screen flex items-center justify-center relative overflow-hidden bg-gradient-to-br from-gray-300 via-black to-gray-300">
         <div className="container mx-auto px-4 max-w-6xl">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4 font-poppins">
@@ -167,15 +154,15 @@ export default function AziendePrivatiPage() {
                 className="bg-white border border-gray-200 rounded-xl p-8 hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
               >
                 <div className="w-16 h-16 bg-gradient-primary rounded-lg flex items-center justify-center mb-6">
-                  <service.icon className="w-8 h-8 text-white" />
+                  <service.icon className="w-8 h-8 text-primary" />
                 </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                <h3 className="text-2xl font-bold text-black mb-4">
                   {service.title}
                 </h3>
-                <p className="text-gray-600 mb-6">{service.description}</p>
+                <p className="text-gray-300 mb-6">{service.description}</p>
                 <ul className="space-y-2">
                   {service.features.map((feature, idx) => (
-                    <li key={idx} className="flex items-center text-gray-700">
+                    <li key={idx} className="flex items-center text-gray-400">
                       <CheckCircle className="w-5 h-5 text-primary mr-2 flex-shrink-0" />
                       {feature}
                     </li>
@@ -188,7 +175,7 @@ export default function AziendePrivatiPage() {
       </section>
 
       {/* Process */}
-      <section className="py-20 bg-gray-50">
+      <section className="min-h-screen flex items-center justify-center relative overflow-hidden bg-gradient-to-tr from-gray-300 via-black to-gray-300">
         <div className="container mx-auto px-4 max-w-6xl">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4 font-poppins">
@@ -203,7 +190,7 @@ export default function AziendePrivatiPage() {
             {process.map((step, index) => (
               <div key={index} className="relative">
                 <div className="text-center">
-                  <div className="text-6xl font-bold text-primary/20 mb-4 font-poppins">
+                  <div className="text-6xl font-bold text-primary mb-4 font-poppins">
                     {step.number}
                   </div>
                   <h3 className="text-xl font-bold text-gray-900 mb-2">
@@ -212,7 +199,7 @@ export default function AziendePrivatiPage() {
                   <p className="text-gray-600">{step.description}</p>
                 </div>
                 {index < process.length - 1 && (
-                  <div className="hidden md:block absolute top-12 right-0 w-full h-0.5 bg-primary/20 transform translate-x-1/2" />
+                  <div className="hidden md:block absolute top-10 right-0 w-3/5 h-0.5 bg-primary transform translate-x-3/5" />
                 )}
               </div>
             ))}
@@ -221,7 +208,7 @@ export default function AziendePrivatiPage() {
       </section>
 
       {/* Benefits */}
-      <section className="py-20 bg-white">
+      <section className="min-h-screen flex items-center justify-center relative overflow-hidden bg-gradient-to-br from-gray-300 via-black to-gray-300">
         <div className="container mx-auto px-4 max-w-6xl">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4 font-poppins">
@@ -256,7 +243,7 @@ export default function AziendePrivatiPage() {
           </p>
           <a
             href="/#contatti"
-            className="inline-block bg-white text-primary px-8 py-4 rounded-full font-medium hover:shadow-2xl hover:-translate-y-1 transition-all duration-300"
+            className="inline-block bg-black text-white px-8 py-4 rounded-full font-medium hover:shadow-2xl hover:-translate-y-1 transition-all duration-300"
           >
             Contattami Ora
           </a>

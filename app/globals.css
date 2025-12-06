@@ -1,35 +1,35 @@
 @import "tailwindcss";
 
 :root {
-  /* Colors - Modern & Vibrant Palette */
-  --background: #ffffff;
-  --foreground: #0a0a0a;
+  /* Colors - Dark Theme with Yellow Accents */
+  --background: #0a0a0a;
+  --foreground: #fafafa;
 
-  /* Primary brand colors */
-  --primary: #6366f1;
-  --primary-dark: #4f46e5;
-  --primary-light: #818cf8;
+  /* Primary brand colors - Yellow/Amber */
+  --primary: #fbbf24;
+  --primary-dark: #f59e0b;
+  --primary-light: #fcd34d;
 
-  /* Accent colors */
-  --accent: #ec4899;
-  --accent-dark: #db2777;
-  --accent-light: #f472b6;
+  /* Accent colors - Yellow variations */
+  --accent: #f59e0b;
+  --accent-dark: #d97706;
+  --accent-light: #fde68a;
 
-  /* Neutral colors */
-  --gray-50: #fafafa;
-  --gray-100: #f4f4f5;
-  --gray-200: #e4e4e7;
-  --gray-300: #d4d4d8;
-  --gray-400: #a1a1aa;
-  --gray-500: #71717a;
-  --gray-600: #52525b;
-  --gray-700: #3f3f46;
-  --gray-800: #27272a;
-  --gray-900: #18181b;
+  /* Neutral colors - Inverted for dark theme */
+  --gray-50: #18181b;
+  --gray-100: #27272a;
+  --gray-200: #3f3f46;
+  --gray-300: #52525b;
+  --gray-400: #71717a;
+  --gray-500: #a1a1aa;
+  --gray-600: #d4d4d8;
+  --gray-700: #e4e4e7;
+  --gray-800: #f4f4f5;
+  --gray-900: #fafafa;
 
   /* Semantic colors */
   --success: #22c55e;
-  --warning: #f59e0b;
+  --warning: #fbbf24;
   --error: #ef4444;
   --info: #06b6d4;
 }
@@ -66,8 +66,9 @@
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: light) {
   :root {
+    /* Even in light mode preference, we keep it dark for consistency */
     --background: #0a0a0a;
     --foreground: #fafafa;
   }
@@ -76,8 +77,6 @@
 /* Base styles */
 * {
   box-sizing: border-box;
-  margin: 0;
-  padding: 0;
 }
 
 html {
@@ -129,11 +128,11 @@ body {
 
 /* Gradient utilities */
 .gradient-primary {
-  background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+  background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary-light) 100%);
 }
 
 .gradient-text {
-  background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;

@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
-import Link from "next/link";
-import { ArrowLeft, Folder } from "lucide-react";
+import { Folder } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Portfolio Progetti | Programmatore Ferrara Bologna",
@@ -17,21 +16,9 @@ export const metadata: Metadata = {
 export default function PortfolioPage() {
   return (
     <div className="min-h-screen">
-      {/* Breadcrumb */}
-      <div className="bg-gray-50 py-4 border-b">
-        <div className="container mx-auto px-4 max-w-6xl">
-          <Link
-            href="/"
-            className="inline-flex items-center text-gray-600 hover:text-primary transition-colors"
-          >
-            <ArrowLeft className="w-4 h-4 mr-2" />
-            Torna alla Home
-          </Link>
-        </div>
-      </div>
 
       {/* Hero */}
-      <section className="bg-gradient-to-br from-primary to-accent text-white py-20">
+      <section className="bg-gradient-to-br from-primary to-accent text-white py-20 mt-20">
         <div className="container mx-auto px-4 max-w-6xl text-center">
           <h1 className="text-5xl md:text-6xl font-bold mb-6 font-poppins">
             Portfolio Progetti

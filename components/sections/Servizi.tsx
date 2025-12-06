@@ -23,7 +23,7 @@ export default function Servizi() {
         { icon: Brain, text: "Soluzioni AI" },
       ],
       href: "/servizi/aziende-privati",
-      gradient: "from-blue-500 to-cyan-500",
+      gradient: "from-amber-600 to-yellow-400",
     },
     {
       title: "Informazioni per Web Agency",
@@ -37,7 +37,7 @@ export default function Servizi() {
         { icon: Brain, text: "Consulenza Tecnica" },
       ],
       href: "/servizi/web-agency",
-      gradient: "from-purple-500 to-pink-500",
+      gradient: "from-yellow-500 to-amber-400",
     },
   ];
 
@@ -45,7 +45,7 @@ export default function Servizi() {
     <section
       id="servizi"
       ref={ref}
-      className="bg-gradient-to-br from-gray-50 to-gray-100"
+      className="min-h-screen flex items-center justify-center relative overflow-hidden bg-gradient-to-br from-gray-300 via-black to-gray-300"
     >
       <div className="container mx-auto px-4 max-w-6xl">
         <motion.div
@@ -54,11 +54,11 @@ export default function Servizi() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 font-poppins mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-white font-poppins mb-4">
             I Miei Servizi
           </h2>
           <div className="w-24 h-1 bg-gradient-primary mx-auto rounded-full mb-6"></div>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+          <p className="text-xl text-white max-w-2xl mx-auto">
             Soluzioni professionali per ogni esigenza, dalla singola azienda alle web agency
           </p>
         </motion.div>
@@ -75,10 +75,10 @@ export default function Servizi() {
                 href={service.href}
                 className="block h-full group"
               >
-                <div className="h-full bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden hover:-translate-y-2">
+                <div className="h-full bg-gray-900 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden hover:-translate-y-2 border border-gray-800">
                   {/* Header with Gradient */}
-                  <div className={`bg-gradient-to-r ${service.gradient} p-8 text-white relative overflow-hidden`}>
-                    <div className="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full -mr-32 -mt-32" />
+                  <div className={`bg-gradient-to-r ${service.gradient} p-8 text-black relative overflow-hidden`}>
+                    <div className="absolute top-0 right-0 w-64 h-64 bg-black/10 rounded-full -mr-32 -mt-32" />
                     <service.icon className="w-16 h-16 mb-4 relative z-10" />
                     <h3 className="text-2xl font-bold mb-2 relative z-10">
                       {service.title}
@@ -87,7 +87,7 @@ export default function Servizi() {
 
                   {/* Content */}
                   <div className="p-8">
-                    <p className="text-gray-600 mb-6 leading-relaxed">
+                    <p className="text-gray-300 mb-6 leading-relaxed">
                       {service.description}
                     </p>
 
@@ -96,7 +96,7 @@ export default function Servizi() {
                       {service.features.map((feature, idx) => (
                         <li key={idx} className="flex items-center space-x-3">
                           <feature.icon className="w-5 h-5 text-primary flex-shrink-0" />
-                          <span className="text-gray-700">{feature.text}</span>
+                          <span className="text-gray-400">{feature.text}</span>
                         </li>
                       ))}
                     </ul>

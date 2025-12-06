@@ -1,19 +1,19 @@
 import Link from "next/link";
-import { Mail, Phone, MapPin, Github, Linkedin, Twitter } from "lucide-react";
+import { Mail, Phone, MapPin, Github, Linkedin, Instagram, Facebook } from "lucide-react";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-gray-900 text-gray-300">
+    <footer className="flex items-center justify-center relative overflow-hidden bg-gradient-to-tr from-gray-300 via-black to-gray-300">
       <div className="container mx-auto px-4 max-w-6xl py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Brand Section */}
           <div className="space-y-4">
             <h3 className="text-2xl font-bold gradient-text font-poppins">
-              Vesewebdev
+              Veselin Hristov
             </h3>
-            <p className="text-sm text-gray-400">
+            <p className="text-sm text-white">
               Sviluppatore web freelance specializzato in soluzioni moderne e
               performanti.
             </p>
@@ -24,7 +24,7 @@ export default function Footer() {
             <h4 className="text-lg font-semibold text-white mb-4">
               Link Rapidi
             </h4>
-            <ul className="space-y-2">
+            <ul className="text-white space-y-2">
               <li>
                 <a
                   href="#chi-sono"
@@ -63,7 +63,7 @@ export default function Footer() {
           {/* Servizi */}
           <div>
             <h4 className="text-lg font-semibold text-white mb-4">Servizi</h4>
-            <ul className="space-y-2">
+            <ul className="text-white space-y-2">
               <li>
                 <Link
                   href="/servizi/aziende-privati"
@@ -94,42 +94,45 @@ export default function Footer() {
           {/* Contatti */}
           <div>
             <h4 className="text-lg font-semibold text-white mb-4">Contatti</h4>
-            <ul className="space-y-3">
-              <li className="flex items-center space-x-2">
-                <MapPin size={18} className="text-primary" />
-                <span className="text-sm">Ferrara, Emilia-Romagna</span>
-              </li>
+            <ul className="text-white space-y-3">
               <li className="flex items-center space-x-2">
                 <Phone size={18} className="text-primary" />
-                <span className="text-sm">+39 XXX XXXXXXX</span>
+                <a href="tel:+393806455771" className="hover:text-primary transition-colors duration-200">+39 380 645 5771</a>
               </li>
               <li className="flex items-center space-x-2">
                 <Mail size={18} className="text-primary" />
-                <span className="text-sm">info@vesewebdev.com</span>
+                <a href="mailto:info@vesewebdev.it" className="hover:text-primary transition-colors duration-200">info@vesewebdev.it</a>
               </li>
             </ul>
             {/* Social Links */}
-            <div className="flex space-x-4 mt-4">
+            <div className="text-white flex space-x-4 mt-4">
               <a
-                href="#"
+                href="https://github.com/Vese10"
                 className="hover:text-primary transition-colors duration-200"
                 aria-label="GitHub"
               >
                 <Github size={20} />
               </a>
               <a
-                href="#"
+                href="https://www.linkedin.com/in/veselin-hristov-web-dev/"
                 className="hover:text-primary transition-colors duration-200"
                 aria-label="LinkedIn"
               >
                 <Linkedin size={20} />
               </a>
               <a
-                href="#"
+                href="https://www.instagram.com/vese.10/"
                 className="hover:text-primary transition-colors duration-200"
-                aria-label="Twitter"
+                aria-label="Instagram"
               >
-                <Twitter size={20} />
+                <Instagram size={20} />
+              </a>
+              <a
+                href="https://www.facebook.com/people/Veselin-Hristov/pfbid02eVPqWo21cM8zTKN51MCLAmcCuHzRaPMHrpvVQKJVMVYqmMVo8KSuCHgKtPk5rJyql/?rdid=i0WxxbfM5v62kaKj&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F17ZD4CeLRU%2F"
+                className="hover:text-primary transition-colors duration-200"
+                aria-label="Facebook"
+              >
+                <Facebook size={20} />
               </a>
             </div>
           </div>

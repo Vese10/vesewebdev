@@ -30,18 +30,18 @@ export default function Navbar() {
       className={cn(
         "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
         isScrolled
-          ? "glass-dark shadow-lg py-3"
+          ? "bg-gray-100 shadow-lg py-3"
           : "bg-transparent py-5"
       )}
     >
-      <div className="container mx-auto px-4 max-w-6xl">
-        <div className="flex items-center justify-between">
+      <div className="flex mx-auto px-4 w-full">
+        <div className="flex items-center justify-between w-full">
           {/* Logo */}
           <Link
             href="/"
             className="text-2xl font-bold gradient-text font-poppins"
           >
-            Vesewebdev
+            Veselin Hristov
           </Link>
 
           {/* Desktop Navigation */}
@@ -50,14 +50,14 @@ export default function Navbar() {
               <a
                 key={item.name}
                 href={item.href}
-                className="text-foreground hover:text-primary transition-colors duration-200 font-medium"
+                className="text-primary hover:text-primary-dark transition-colors duration-200 font-medium"
               >
                 {item.name}
               </a>
             ))}
             <a
               href="#contatti"
-              className="bg-gradient-primary text-white px-6 py-2 rounded-full hover:shadow-lg hover:-translate-y-0.5 transition-all duration-200 font-medium"
+              className="bg-primary text-black px-6 py-2 rounded-full hover:shadow-lg hover:-translate-y-0.5 transition-all duration-200 font-medium"
             >
               Contattami
             </a>

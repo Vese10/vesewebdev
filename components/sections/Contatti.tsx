@@ -41,7 +41,7 @@ export default function Contatti() {
     <section
       id="contatti"
       ref={ref}
-      className="bg-gradient-to-br from-gray-50 to-gray-100"
+      className="min-h-screen flex items-center justify-center relative overflow-hidden bg-gradient-to-br from-gray-300 via-black to-gray-300"
     >
       <div className="container mx-auto px-4 max-w-6xl">
         <motion.div
@@ -50,11 +50,11 @@ export default function Contatti() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 font-poppins mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-white font-poppins mb-4">
             Contattami
           </h2>
           <div className="w-24 h-1 bg-gradient-primary mx-auto rounded-full mb-6"></div>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+          <p className="text-xl text-white max-w-2xl mx-auto">
             Hai un progetto in mente? Parliamone!
           </p>
         </motion.div>
@@ -68,10 +68,10 @@ export default function Contatti() {
             className="space-y-8"
           >
             <div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">
+              <h3 className="text-2xl font-bold text-white mb-6">
                 Informazioni di Contatto
               </h3>
-              <p className="text-gray-600 mb-8">
+              <p className="text-white mb-8">
                 Sono disponibile per nuovi progetti e collaborazioni. Contattami
                 tramite il form o usando le informazioni qui sotto.
               </p>
@@ -80,55 +80,56 @@ export default function Contatti() {
             <div className="space-y-6">
               <div className="flex items-start space-x-4">
                 <div className="w-12 h-12 bg-gradient-primary rounded-lg flex items-center justify-center flex-shrink-0">
-                  <MapPin className="w-6 h-6 text-white" />
+                  <MapPin className="w-6 h-6 text-primary" />
                 </div>
                 <div>
-                  <h4 className="font-semibold text-gray-900">Sede</h4>
-                  <p className="text-gray-600">
-                    Ferrara, Emilia-Romagna<br />
+                  <h4 className="font-semibold text-white">Sede</h4>
+                  <a href="https://www.google.com/maps/place/Siti+internet+da+Vese/@44.8046469,11.6806138,13.75z/data=!4m6!3m5!1s0x477e452fc82130bd:0x585947921928ce98!8m2!3d44.7962962!4d11.7251667!16s%2Fg%2F11ym3sntbd?entry=ttu&g_ep=EgoyMDI1MTIwMi4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer" className="text-primary hover:text-accent transition-colors">
+                    via Aurelio Zamboni, 99/C<br />
+                    44124 Ferrara, Emilia-Romagna<br />
                     Operativo anche a Bologna e provincia
-                  </p>
-                </div>
-              </div>
-
-              <div className="flex items-start space-x-4">
-                <div className="w-12 h-12 bg-gradient-primary rounded-lg flex items-center justify-center flex-shrink-0">
-                  <Phone className="w-6 h-6 text-white" />
-                </div>
-                <div>
-                  <h4 className="font-semibold text-gray-900">Telefono</h4>
-                  <a
-                    href="tel:+39XXXXXXXXX"
-                    className="text-primary hover:text-accent transition-colors"
-                  >
-                    +39 XXX XXXXXXX
                   </a>
                 </div>
               </div>
 
               <div className="flex items-start space-x-4">
                 <div className="w-12 h-12 bg-gradient-primary rounded-lg flex items-center justify-center flex-shrink-0">
-                  <Mail className="w-6 h-6 text-white" />
+                  <Phone className="w-6 h-6 text-primary" />
                 </div>
                 <div>
-                  <h4 className="font-semibold text-gray-900">Email</h4>
+                  <h4 className="font-semibold text-white">Telefono</h4>
                   <a
-                    href="mailto:info@vesewebdev.com"
+                    href="tel:+393806455771"
                     className="text-primary hover:text-accent transition-colors"
                   >
-                    info@vesewebdev.com
+                    +39 380 645 5771
+                  </a>
+                </div>
+              </div>
+
+              <div className="flex items-start space-x-4">
+                <div className="w-12 h-12 bg-gradient-primary rounded-lg flex items-center justify-center flex-shrink-0">
+                  <Mail className="w-6 h-6 text-primary" />
+                </div>
+                <div>
+                  <h4 className="font-semibold text-white">Email</h4>
+                  <a
+                    href="mailto:info@vesewebdev.it"
+                    className="text-primary hover:text-accent transition-colors"
+                  >
+                    info@vesewebdev.it
                   </a>
                 </div>
               </div>
             </div>
 
             {/* Availability Badge */}
-            <div className="bg-white p-6 rounded-xl shadow-md">
+            <div className="bg-white p-6 rounded-xl shadow-md border border-gray-700">
               <div className="flex items-center space-x-3">
                 <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse" />
                 <div>
-                  <p className="font-semibold text-gray-900">Disponibile per progetti</p>
-                  <p className="text-sm text-gray-600">
+                  <p className="font-semibold text-gray-300">Disponibile per progetti</p>
+                  <p className="text-sm text-gray-400">
                     Tempo di risposta: 24-48 ore
                   </p>
                 </div>
@@ -144,13 +145,13 @@ export default function Contatti() {
           >
             <form
               onSubmit={handleSubmit(onSubmit)}
-              className="bg-white p-8 rounded-2xl shadow-lg space-y-6"
+              className="bg-gray-900 p-8 rounded-2xl shadow-lg space-y-6 border border-gray-800"
             >
               {/* Name */}
               <div>
                 <label
                   htmlFor="name"
-                  className="block text-sm font-medium text-gray-700 mb-2"
+                  className="block text-sm font-medium text-gray-300 mb-2"
                 >
                   Nome *
                 </label>
@@ -158,7 +159,7 @@ export default function Contatti() {
                   {...register("name", { required: "Il nome è obbligatorio" })}
                   type="text"
                   id="name"
-                  className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-transparent transition-all outline-none"
+                  className="w-full px-4 py-3 rounded-lg border border-gray-700 bg-gray-800 text-white focus:ring-2 focus:ring-primary focus:border-transparent transition-all outline-none"
                   placeholder="Il tuo nome"
                 />
                 {errors.name && (
@@ -170,7 +171,7 @@ export default function Contatti() {
               <div>
                 <label
                   htmlFor="email"
-                  className="block text-sm font-medium text-gray-700 mb-2"
+                  className="block text-sm font-medium text-gray-300 mb-2"
                 >
                   Email *
                 </label>
@@ -184,7 +185,7 @@ export default function Contatti() {
                   })}
                   type="email"
                   id="email"
-                  className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-transparent transition-all outline-none"
+                  className="w-full px-4 py-3 rounded-lg border border-gray-700 bg-gray-800 text-white focus:ring-2 focus:ring-primary focus:border-transparent transition-all outline-none"
                   placeholder="tua@email.com"
                 />
                 {errors.email && (
@@ -196,7 +197,7 @@ export default function Contatti() {
               <div>
                 <label
                   htmlFor="phone"
-                  className="block text-sm font-medium text-gray-700 mb-2"
+                  className="block text-sm font-medium text-gray-300 mb-2"
                 >
                   Telefono (opzionale)
                 </label>
@@ -204,7 +205,7 @@ export default function Contatti() {
                   {...register("phone")}
                   type="tel"
                   id="phone"
-                  className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-transparent transition-all outline-none"
+                  className="w-full px-4 py-3 rounded-lg border border-gray-700 bg-gray-800 text-white focus:ring-2 focus:ring-primary focus:border-transparent transition-all outline-none"
                   placeholder="+39 123 4567890"
                 />
               </div>
@@ -213,7 +214,7 @@ export default function Contatti() {
               <div>
                 <label
                   htmlFor="message"
-                  className="block text-sm font-medium text-gray-700 mb-2"
+                  className="block text-sm font-medium text-gray-300 mb-2"
                 >
                   Messaggio *
                 </label>
@@ -227,7 +228,7 @@ export default function Contatti() {
                   })}
                   id="message"
                   rows={5}
-                  className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-transparent transition-all outline-none resize-none"
+                  className="w-full px-4 py-3 rounded-lg border border-gray-700 bg-gray-800 text-white focus:ring-2 focus:ring-primary focus:border-transparent transition-all outline-none resize-none"
                   placeholder="Raccontami del tuo progetto..."
                 />
                 {errors.message && (
@@ -239,7 +240,7 @@ export default function Contatti() {
               <button
                 type="submit"
                 disabled={isLoading || isSubmitted}
-                className="w-full bg-gradient-primary text-white px-8 py-4 rounded-lg font-medium hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300 flex items-center justify-center space-x-2 disabled:opacity-50 disabled:cursor-not-allowed"
+                className="w-full bg-primary text-black px-8 py-4 rounded-lg font-medium hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300 flex items-center justify-center space-x-2 disabled:opacity-50 disabled:cursor-not-allowed cursor-pointer"
               >
                 {isLoading ? (
                   <>
@@ -253,8 +254,8 @@ export default function Contatti() {
                   </>
                 ) : (
                   <>
-                    <Send className="w-5 h-5" />
                     <span>Invia Messaggio</span>
+                    <Send className="w-5 h-5" />
                   </>
                 )}
               </button>
