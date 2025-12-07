@@ -1,76 +1,48 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-:root {
-  /* Colors - Dark Theme with Yellow Accents */
-  --background: #0a0a0a;
-  --foreground: #fafafa;
-
-  /* Primary brand colors - Yellow/Amber */
-  --primary: #fbbf24;
-  --primary-dark: #f59e0b;
-  --primary-light: #fcd34d;
-
-  /* Accent colors - Yellow variations */
-  --accent: #f59e0b;
-  --accent-dark: #d97706;
-  --accent-light: #fde68a;
-
-  /* Neutral colors - Inverted for dark theme */
-  --gray-50: #18181b;
-  --gray-100: #27272a;
-  --gray-200: #3f3f46;
-  --gray-300: #52525b;
-  --gray-400: #71717a;
-  --gray-500: #a1a1aa;
-  --gray-600: #d4d4d8;
-  --gray-700: #e4e4e7;
-  --gray-800: #f4f4f5;
-  --gray-900: #fafafa;
-
-  /* Semantic colors */
-  --success: #22c55e;
-  --warning: #fbbf24;
-  --error: #ef4444;
-  --info: #06b6d4;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-
-  --color-primary: var(--primary);
-  --color-primary-dark: var(--primary-dark);
-  --color-primary-light: var(--primary-light);
-
-  --color-accent: var(--accent);
-  --color-accent-dark: var(--accent-dark);
-  --color-accent-light: var(--accent-light);
-
-  --color-gray-50: var(--gray-50);
-  --color-gray-100: var(--gray-100);
-  --color-gray-200: var(--gray-200);
-  --color-gray-300: var(--gray-300);
-  --color-gray-400: var(--gray-400);
-  --color-gray-500: var(--gray-500);
-  --color-gray-600: var(--gray-600);
-  --color-gray-700: var(--gray-700);
-  --color-gray-800: var(--gray-800);
-  --color-gray-900: var(--gray-900);
-
-  --color-success: var(--success);
-  --color-warning: var(--warning);
-  --color-error: var(--error);
-  --color-info: var(--info);
-
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: light) {
+@layer base {
   :root {
-    /* Even in light mode preference, we keep it dark for consistency */
+    /* Colors - Dark Theme with Yellow Accents */
     --background: #0a0a0a;
     --foreground: #fafafa;
+
+    /* Primary brand colors - Yellow/Amber */
+    --primary: #fbbf24;
+    --primary-dark: #f59e0b;
+    --primary-light: #fcd34d;
+
+    /* Accent colors - Yellow variations */
+    --accent: #f59e0b;
+    --accent-dark: #d97706;
+    --accent-light: #fde68a;
+
+    /* Neutral colors - Inverted for dark theme */
+    --gray-50: #18181b;
+    --gray-100: #27272a;
+    --gray-200: #3f3f46;
+    --gray-300: #52525b;
+    --gray-400: #71717a;
+    --gray-500: #a1a1aa;
+    --gray-600: #d4d4d8;
+    --gray-700: #e4e4e7;
+    --gray-800: #f4f4f5;
+    --gray-900: #fafafa;
+
+    /* Semantic colors */
+    --success: #22c55e;
+    --warning: #fbbf24;
+    --error: #ef4444;
+    --info: #06b6d4;
+  }
+
+  @media (prefers-color-scheme: light) {
+    :root {
+      /* Even in light mode preference, we keep it dark for consistency */
+      --background: #0a0a0a;
+      --foreground: #fafafa;
+    }
   }
 }
 

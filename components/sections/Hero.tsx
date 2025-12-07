@@ -7,7 +7,7 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="min-h-screen flex items-center justify-center relative overflow-hidden bg-gradient-to-br from-gray-300 via-black to-gray-300"
+      className="min-h-screen flex items-center justify-center relative overflow-hidden bg-gradient-to-br from-gray-500 via-black to-gray-500"
     >
       {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden">
