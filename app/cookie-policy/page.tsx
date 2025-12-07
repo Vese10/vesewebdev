@@ -17,14 +17,6 @@ export default function CookiePolicy() {
   return (
     <div className="min-h-screen bg-background text-foreground py-20">
       <div className="container mx-auto px-4 max-w-4xl">
-        {/* Back Button */}
-        <Link
-          href="/"
-          className="inline-flex items-center space-x-2 text-primary hover:text-primary-light transition-colors mb-8"
-        >
-          <ArrowLeft size={20} />
-          <span>Torna alla Home</span>
-        </Link>
 
         {/* Header */}
         <div className="mb-12 text-center">
@@ -34,7 +26,7 @@ export default function CookiePolicy() {
           <h1 className="text-4xl md:text-5xl font-bold gradient-text mb-4">
             Cookie Policy
           </h1>
-          <p className="text-gray-400 text-lg">
+          <p className="text-white text-lg">
             Ultimo aggiornamento: {new Date().toLocaleDateString("it-IT")}
           </p>
         </div>
@@ -46,7 +38,7 @@ export default function CookiePolicy() {
             <h2 className="text-2xl font-semibold text-primary mb-4">
               1. Introduzione
             </h2>
-            <p className="leading-relaxed">
+            <p className="text-white leading-relaxed">
               Questo sito web utilizza cookie e tecnologie simili per garantire
               il corretto funzionamento delle procedure e migliorare
               l'esperienza di utilizzo delle applicazioni online. Il presente
@@ -61,12 +53,12 @@ export default function CookiePolicy() {
             <h2 className="text-2xl font-semibold text-primary mb-4">
               2. Cosa Sono i Cookie
             </h2>
-            <p className="leading-relaxed mb-4">
+            <p className="text-white leading-relaxed mb-4">
               I cookie sono piccoli file di testo che i siti visitati inviano
               al terminale dell'utente, dove vengono memorizzati per essere poi
               ritrasmessi agli stessi siti alla visita successiva.
             </p>
-            <p className="leading-relaxed">
+            <p className="text-white leading-relaxed">
               I cookie possono essere utilizzati per diverse finalità: esecuzione
               di autenticazioni informatiche, monitoraggio di sessioni,
               memorizzazione di informazioni su specifiche configurazioni
@@ -86,7 +78,7 @@ export default function CookiePolicy() {
                 <h3 className="text-xl font-semibold text-white mb-2">
                   3.1 Cookie Tecnici
                 </h3>
-                <p className="leading-relaxed">
+                <p className="text-white leading-relaxed">
                   Sono i cookie necessari al funzionamento del sito e non
                   richiedono il consenso dell'utente. Questi cookie permettono
                   la navigazione e l'utilizzo delle funzionalità del sito.
@@ -97,7 +89,7 @@ export default function CookiePolicy() {
                 <h3 className="text-xl font-semibold text-white mb-2">
                   3.2 Cookie Analitici
                 </h3>
-                <p className="leading-relaxed">
+                <p className="text-white leading-relaxed">
                   Utilizzati per raccogliere informazioni sull'utilizzo del
                   sito da parte degli utenti in forma aggregata e anonima.
                   Questi cookie ci aiutano a capire come i visitatori
@@ -109,11 +101,11 @@ export default function CookiePolicy() {
                 <h3 className="text-xl font-semibold text-white mb-2">
                   3.3 Cookie di Terze Parti
                 </h3>
-                <p className="leading-relaxed mb-2">
+                <p className="text-white leading-relaxed mb-2">
                   Il sito potrebbe utilizzare servizi di terze parti che
                   installano cookie per le seguenti finalità:
                 </p>
-                <ul className="list-disc list-inside space-y-2 ml-4">
+                <ul className="text-white list-disc list-inside space-y-2 ml-4">
                   <li>Vercel Analytics - Analisi del traffico e performance</li>
                   <li>Usercentrics - Gestione del consenso ai cookie</li>
                 </ul>
@@ -126,7 +118,7 @@ export default function CookiePolicy() {
             <h2 className="text-2xl font-semibold text-primary mb-4">
               4. Come Gestire i Cookie
             </h2>
-            <p className="leading-relaxed mb-4">
+            <p className="text-white leading-relaxed mb-4">
               Puoi gestire le tue preferenze sui cookie in qualsiasi momento
               utilizzando il pannello di gestione delle preferenze. Puoi anche
               gestire i cookie direttamente dalle impostazioni del tuo browser.
@@ -139,12 +131,12 @@ export default function CookiePolicy() {
             <h2 className="text-2xl font-semibold text-primary mb-4">
               5. Gestione tramite Browser
             </h2>
-            <p className="leading-relaxed mb-4">
+            <p className="text-white leading-relaxed mb-4">
               È possibile gestire i cookie anche attraverso le impostazioni del
               browser. Di seguito i link alle istruzioni dei browser più
               diffusi:
             </p>
-            <ul className="list-disc list-inside space-y-2 ml-4">
+            <ul className="text-white list-disc list-inside space-y-2 ml-4">
               <li>
                 <a
                   href="https://support.google.com/chrome/answer/95647"
@@ -193,7 +185,7 @@ export default function CookiePolicy() {
             <h2 className="text-2xl font-semibold text-primary mb-4">
               6. Contatti
             </h2>
-            <p className="leading-relaxed mb-4">
+            <p className="text-white leading-relaxed mb-4">
               Per qualsiasi domanda o richiesta riguardante la nostra Cookie
               Policy, è possibile contattarci a:
             </p>

@@ -16,14 +16,6 @@ export default function PrivacyPolicy() {
   return (
     <div className="min-h-screen bg-background text-foreground py-20">
       <div className="container mx-auto px-4 max-w-4xl">
-        {/* Back Button */}
-        <Link
-          href="/"
-          className="inline-flex items-center space-x-2 text-primary hover:text-primary-light transition-colors mb-8"
-        >
-          <ArrowLeft size={20} />
-          <span>Torna alla Home</span>
-        </Link>
 
         {/* Header */}
         <div className="mb-12 text-center">
@@ -33,7 +25,7 @@ export default function PrivacyPolicy() {
           <h1 className="text-4xl md:text-5xl font-bold gradient-text mb-4">
             Privacy Policy
           </h1>
-          <p className="text-gray-400 text-lg">
+          <p className="text-white text-lg">
             Ultimo aggiornamento: {new Date().toLocaleDateString("it-IT")}
           </p>
         </div>
@@ -45,10 +37,10 @@ export default function PrivacyPolicy() {
             <h2 className="text-2xl font-semibold text-primary mb-4">
               1. Introduzione
             </h2>
-            <p className="leading-relaxed">
+            <p className="text-white leading-relaxed">
               La presente Privacy Policy descrive le modalità di trattamento dei
               dati personali degli utenti che consultano il sito{" "}
-              <strong className="text-white">vesewebdev.vercel.app</strong> in
+              <strong className="text-white">vesewebdev.it</strong> in
               conformità al Regolamento UE 2016/679 (GDPR) e al D.Lgs. 196/2003
               come modificato dal D.Lgs. 101/2018.
             </p>
@@ -60,10 +52,10 @@ export default function PrivacyPolicy() {
               2. Titolare del Trattamento
             </h2>
             <div className="space-y-2">
-              <p className="leading-relaxed">
+              <p className="text-white leading-relaxed">
                 <strong className="text-white">Titolare:</strong> Veselin Hristov
               </p>
-              <p className="leading-relaxed">
+              <p className="text-white leading-relaxed">
                 <strong className="text-white">Email:</strong>{" "}
                 <a
                   href="mailto:info@vesewebdev.it"
@@ -72,7 +64,7 @@ export default function PrivacyPolicy() {
                   info@vesewebdev.it
                 </a>
               </p>
-              <p className="leading-relaxed">
+              <p className="text-white leading-relaxed">
                 <strong className="text-white">Telefono:</strong>{" "}
                 <a
                   href="tel:+393806455771"
@@ -94,7 +86,7 @@ export default function PrivacyPolicy() {
                 <h3 className="text-xl font-semibold text-white mb-2">
                   3.1 Dati di Navigazione
                 </h3>
-                <p className="leading-relaxed">
+                <p className="text-white leading-relaxed">
                   I sistemi informatici e le procedure software preposte al
                   funzionamento di questo sito acquisiscono, nel corso del loro
                   normale esercizio, alcuni dati personali la cui trasmissione è
@@ -107,7 +99,7 @@ export default function PrivacyPolicy() {
                 <h3 className="text-xl font-semibold text-white mb-2">
                   3.2 Dati Forniti Volontariamente
                 </h3>
-                <p className="leading-relaxed">
+                <p className="text-white  leading-relaxed">
                   L'invio facoltativo, esplicito e volontario di dati personali
                   attraverso il modulo di contatto presente sul sito comporta
                   l'acquisizione dei dati di contatto del mittente necessari per
@@ -119,7 +111,7 @@ export default function PrivacyPolicy() {
                 <h3 className="text-xl font-semibold text-white mb-2">
                   3.3 Cookie e Dati di Utilizzo
                 </h3>
-                <p className="leading-relaxed mb-2">
+                <p className="text-white leading-relaxed mb-2">
                   Il sito utilizza cookie e tecnologie simili. Per informazioni
                   dettagliate, consultare la{" "}
                   <Link
@@ -139,10 +131,10 @@ export default function PrivacyPolicy() {
             <h2 className="text-2xl font-semibold text-primary mb-4">
               4. Finalità del Trattamento
             </h2>
-            <p className="leading-relaxed mb-4">
+            <p className="text-white leading-relaxed mb-4">
               I dati personali sono trattati per le seguenti finalità:
             </p>
-            <ul className="list-disc list-inside space-y-2 ml-4">
+            <ul className="text-white list-disc list-inside space-y-2 ml-4">
               <li>Rispondere alle richieste di contatto e informazioni</li>
               <li>Fornire preventivi e proposte commerciali</li>
               <li>Gestire la relazione contrattuale con i clienti</li>
@@ -158,11 +150,11 @@ export default function PrivacyPolicy() {
             <h2 className="text-2xl font-semibold text-primary mb-4">
               5. Base Giuridica del Trattamento
             </h2>
-            <p className="leading-relaxed mb-4">
+            <p className="text-white leading-relaxed mb-4">
               Il trattamento dei dati personali si basa sulle seguenti basi
               giuridiche:
             </p>
-            <ul className="list-disc list-inside space-y-2 ml-4">
+            <ul className="text-white list-disc list-inside space-y-2 ml-4">
               <li>
                 <strong className="text-white">Consenso dell'interessato</strong>{" "}
                 - per l'invio di comunicazioni commerciali
@@ -187,7 +179,7 @@ export default function PrivacyPolicy() {
             <h2 className="text-2xl font-semibold text-primary mb-4">
               6. Periodo di Conservazione
             </h2>
-            <p className="leading-relaxed">
+            <p className="text-white leading-relaxed">
               I dati personali saranno conservati per il tempo strettamente
               necessario al conseguimento delle finalità per le quali sono stati
               raccolti. I dati di contatto forniti volontariamente saranno
@@ -202,10 +194,10 @@ export default function PrivacyPolicy() {
             <h2 className="text-2xl font-semibold text-primary mb-4">
               7. Diritti dell'Interessato
             </h2>
-            <p className="leading-relaxed mb-4">
+            <p className="text-white leading-relaxed mb-4">
               In qualità di interessato, hai il diritto di:
             </p>
-            <ul className="list-disc list-inside space-y-2 ml-4">
+            <ul className="text-white list-disc list-inside space-y-2 ml-4">
               <li>
                 <strong className="text-white">Accesso:</strong> ottenere conferma
                 dell'esistenza di dati personali e accedervi
@@ -236,7 +228,7 @@ export default function PrivacyPolicy() {
                 basata sul consenso prestato prima della revoca
               </li>
             </ul>
-            <p className="leading-relaxed mt-4">
+            <p className="text-white leading-relaxed mt-4">
               Per esercitare questi diritti, contattare il Titolare agli
               indirizzi indicati nella sezione 2.
             </p>
@@ -247,7 +239,7 @@ export default function PrivacyPolicy() {
             <h2 className="text-2xl font-semibold text-primary mb-4">
               8. Sicurezza dei Dati
             </h2>
-            <p className="leading-relaxed">
+            <p className="text-white leading-relaxed">
               Il Titolare adotta misure di sicurezza tecniche e organizzative
               adeguate per proteggere i dati personali da accessi non autorizzati,
               divulgazione, modifica o distruzione. Il sito utilizza protocollo
@@ -260,7 +252,7 @@ export default function PrivacyPolicy() {
             <h2 className="text-2xl font-semibold text-primary mb-4">
               9. Comunicazione e Diffusione
             </h2>
-            <p className="leading-relaxed">
+            <p className="text-white leading-relaxed">
               I dati personali non saranno diffusi e potranno essere comunicati a
               terzi solo per finalità strettamente connesse alla gestione del
               rapporto contrattuale (es. fornitori di servizi hosting, strumenti
@@ -273,7 +265,7 @@ export default function PrivacyPolicy() {
             <h2 className="text-2xl font-semibold text-primary mb-4">
               10. Modifiche alla Privacy Policy
             </h2>
-            <p className="leading-relaxed">
+            <p className="text-white leading-relaxed">
               Il Titolare si riserva il diritto di modificare o aggiornare la
               presente Privacy Policy in qualsiasi momento. Le modifiche saranno
               pubblicate su questa pagina con indicazione della data di ultimo
@@ -287,7 +279,7 @@ export default function PrivacyPolicy() {
             <h2 className="text-2xl font-semibold text-primary mb-4">
               11. Reclami
             </h2>
-            <p className="leading-relaxed">
+            <p className="text-white leading-relaxed">
               Gli interessati che ritengono che il trattamento dei dati personali
               avvenga in violazione della normativa applicabile hanno il diritto
               di proporre reclamo al Garante per la Protezione dei Dati Personali
@@ -309,7 +301,7 @@ export default function PrivacyPolicy() {
             <h2 className="text-2xl font-semibold text-primary mb-4">
               12. Contatti
             </h2>
-            <p className="leading-relaxed mb-4">
+            <p className="text-white leading-relaxed mb-4">
               Per qualsiasi domanda o richiesta riguardante la presente Privacy
               Policy o il trattamento dei dati personali, è possibile contattare
               il Titolare:

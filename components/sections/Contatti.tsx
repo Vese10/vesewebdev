@@ -18,6 +18,7 @@ export default function Contatti() {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
+  const [errorMessage, setErrorMessage] = useState("");
 
   const {
     register,
@@ -28,13 +29,36 @@ export default function Contatti() {
 
   const onSubmit = async (data: FormData) => {
     setIsLoading(true);
-    // Simulate API call
-    await new Promise((resolve) => setTimeout(resolve, 1500));
-    console.log("Form data:", data);
-    setIsLoading(false);
-    setIsSubmitted(true);
-    reset();
-    setTimeout(() => setIsSubmitted(false), 5000);
+    setErrorMessage("");
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      });
+
+      const result = await response.json();
+
+      if (response.ok) {
+        setIsSubmitted(true);
+        reset();
+        setTimeout(() => setIsSubmitted(false), 5000);
+      } else {
+        setErrorMessage(
+          result.error || "Si è verificato un errore. Riprova più tardi."
+        );
+      }
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      setErrorMessage(
+        "Impossibile inviare il messaggio. Verifica la connessione e riprova."
+      );
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   return (
@@ -261,8 +285,17 @@ export default function Contatti() {
               </button>
 
               {isSubmitted && (
-                <div className="bg-green-50 text-green-800 p-4 rounded-lg text-sm">
-                  Grazie per il tuo messaggio! Ti risponderò al più presto.
+                <div className="bg-green-50 text-green-800 p-4 rounded-lg text-sm flex items-center space-x-2">
+                  <CheckCircle className="w-5 h-5 flex-shrink-0" />
+                  <span>
+                    Grazie per il tuo messaggio! Ti risponderò al più presto.
+                  </span>
+                </div>
+              )}
+
+              {errorMessage && (
+                <div className="bg-red-50 text-red-800 p-4 rounded-lg text-sm border border-red-200">
+                  {errorMessage}
                 </div>
               )}
             </form>
