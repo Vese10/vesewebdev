@@ -11,12 +11,41 @@ export async function POST(request: NextRequest) {
   try {
     // Parse request body
     const body = await request.json();
-    const { name, email, phone, message } = body;
+    const { name, email, phone, message, recaptchaToken } = body;
 
     // Validate required fields
     if (!name || !email || !message) {
       return NextResponse.json(
         { error: "Nome, email e messaggio sono obbligatori" },
+        { status: 400 }
+      );
+    }
+
+    // Verify reCAPTCHA token
+    if (!recaptchaToken) {
+      return NextResponse.json(
+        { error: "Verifica reCAPTCHA fallita (token mancante)" },
+        { status: 400 }
+      );
+    }
+
+    const secretKey = process.env.RECAPTCHA_SECRET_KEY;
+    if (!secretKey) {
+      console.error("RECAPTCHA_SECRET_KEY not set");
+      return NextResponse.json(
+        { error: "Errore configurazione server" },
+        { status: 500 }
+      );
+    }
+
+    const verificationUrl = `https://www.google.com/recaptcha/api/siteverify?secret=${secretKey}&response=${recaptchaToken}`;
+    const verificationResponse = await fetch(verificationUrl, { method: "POST" });
+    const verificationResult = await verificationResponse.json();
+
+    if (!verificationResult.success || verificationResult.score < 0.5) {
+      console.warn("reCAPTCHA failed:", verificationResult);
+      return NextResponse.json(
+        { error: "Verifica reCAPTCHA fallita. Sei un robot?" },
         { status: 400 }
       );
     }

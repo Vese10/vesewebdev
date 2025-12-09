@@ -5,12 +5,14 @@ import { useInView } from "framer-motion";
 import { useRef, useState } from "react";
 import { useForm } from "react-hook-form";
 import { Mail, Phone, MapPin, Send, CheckCircle } from "lucide-react";
+import { useGoogleReCaptcha } from "react-google-recaptcha-v3";
 
 type FormData = {
   name: string;
   email: string;
   phone?: string;
   message: string;
+  recaptchaToken?: string;
 };
 
 export default function Contatti() {
@@ -19,6 +21,7 @@ export default function Contatti() {
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
+  const { executeRecaptcha } = useGoogleReCaptcha();
 
   const {
     register,
@@ -32,12 +35,22 @@ export default function Contatti() {
     setErrorMessage("");
 
     try {
+      if (!executeRecaptcha) {
+        console.warn("Recaptcha not ready");
+        setErrorMessage("Servizio antispam non disponibile. Riprova tra poco.");
+        setIsLoading(false);
+        return;
+      }
+
+      const token = await executeRecaptcha("contact_form_submit");
+      const dataWithToken = { ...data, recaptchaToken: token };
+
       const response = await fetch("/api/contact", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(data),
+        body: JSON.stringify(dataWithToken),
       });
 
       const result = await response.json();
@@ -183,7 +196,7 @@ export default function Contatti() {
                   {...register("name", { required: "Il nome è obbligatorio" })}
                   type="text"
                   id="name"
-                  className="w-full px-4 py-3 rounded-lg border border-gray-700 bg-gray-800 text-white focus:ring-2 focus:ring-primary focus:border-transparent transition-all outline-none"
+                  className="w-full px-4 py-3 rounded-lg border border-gray-700 bg-gray-800 text-gray-300 focus:ring-2 focus:ring-primary focus:border-transparent transition-all outline-none"
                   placeholder="Il tuo nome"
                 />
                 {errors.name && (
@@ -209,7 +222,7 @@ export default function Contatti() {
                   })}
                   type="email"
                   id="email"
-                  className="w-full px-4 py-3 rounded-lg border border-gray-700 bg-gray-800 text-white focus:ring-2 focus:ring-primary focus:border-transparent transition-all outline-none"
+                  className="w-full px-4 py-3 rounded-lg border border-gray-700 bg-gray-800 text-gray-300 focus:ring-2 focus:ring-primary focus:border-transparent transition-all outline-none"
                   placeholder="tua@email.com"
                 />
                 {errors.email && (
@@ -229,7 +242,7 @@ export default function Contatti() {
                   {...register("phone")}
                   type="tel"
                   id="phone"
-                  className="w-full px-4 py-3 rounded-lg border border-gray-700 bg-gray-800 text-white focus:ring-2 focus:ring-primary focus:border-transparent transition-all outline-none"
+                  className="w-full px-4 py-3 rounded-lg border border-gray-700 bg-gray-800 text-gray-300 focus:ring-2 focus:ring-primary focus:border-transparent transition-all outline-none"
                   placeholder="+39 123 4567890"
                 />
               </div>
@@ -252,7 +265,7 @@ export default function Contatti() {
                   })}
                   id="message"
                   rows={5}
-                  className="w-full px-4 py-3 rounded-lg border border-gray-700 bg-gray-800 text-white focus:ring-2 focus:ring-primary focus:border-transparent transition-all outline-none resize-none"
+                  className="w-full px-4 py-3 rounded-lg border border-gray-700 bg-gray-800 text-gray-300 focus:ring-2 focus:ring-primary focus:border-transparent transition-all outline-none resize-none"
                   placeholder="Raccontami del tuo progetto..."
                 />
                 {errors.message && (
@@ -283,6 +296,12 @@ export default function Contatti() {
                   </>
                 )}
               </button>
+
+              <div className="text-center text-xs text-gray-500 mt-4">
+                Questo sito è protetto da reCAPTCHA e Google
+                <a href="https://policies.google.com/privacy" target="_blank" rel="noreferrer" className="text-primary hover:underline ml-1">Privacy Policy</a> e
+                <a href="https://policies.google.com/terms" target="_blank" rel="noreferrer" className="text-primary hover:underline ml-1">Termini di Servizio</a>.
+              </div>
 
               {isSubmitted && (
                 <div className="bg-green-50 text-green-800 p-4 rounded-lg text-sm flex items-center space-x-2">

@@ -4,6 +4,7 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Analytics } from "@vercel/analytics/react";
+import RecaptchaProvider from "@/components/providers/RecaptchaProvider";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -132,10 +133,12 @@ export default function RootLayout({
         <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="2e91db8f-dea5-489a-b32c-d645d6f1fa38" type="text/javascript"></script>
       </head>
       <body className="font-sans antialiased">
-        <Navbar />
-        <main className="min-h-screen">{children}</main>
-        <Footer />
-        <Analytics />
+        <RecaptchaProvider>
+          <Navbar />
+          <main className="min-h-screen">{children}</main>
+          <Footer />
+          <Analytics />
+        </RecaptchaProvider>
       </body>
     </html>
   );
