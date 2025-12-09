@@ -288,7 +288,7 @@ export default function PortfolioPage() {
                 <span>In collaborazione</span>
               </div>
               <h2 className="text-3xl md:text-4xl font-bold text-white">
-                Progetti con Kraken Studio
+                Progetti con <a className="text-primary hover:text-accent transition-colors duration-200" href="https://krakenstudio.it" target="_blank" rel="noopener noreferrer">Kraken Studio</a>
               </h2>
               <p className="mt-3 text-white max-w-2xl">
                 Siti realizzati insieme a Kraken Studio di Ferrara: lavoro di

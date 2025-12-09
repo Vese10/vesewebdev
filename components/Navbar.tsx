@@ -57,7 +57,7 @@ export default function Navbar() {
                 </a>
               ))}
               <a
-                href="#contatti"
+                href="/#contatti"
                 className="bg-primary text-black px-6 py-2 rounded-full hover:shadow-lg hover:-translate-y-0.5 transition-all duration-200 font-medium"
               >
                 Contattami
