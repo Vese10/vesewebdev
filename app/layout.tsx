@@ -38,11 +38,11 @@ export const metadata: Metadata = {
   authors: [{ name: "Vesewebdev" }],
   creator: "Vesewebdev",
   publisher: "Vesewebdev",
-  metadataBase: new URL("https://vesewebdev.vercel.app"),
+  metadataBase: new URL("https://vesewebdev.it"),
   openGraph: {
     type: "website",
     locale: "it_IT",
-    url: "https://vesewebdev.vercel.app",
+    url: "https://vesewebdev.it",
     title: "Programmatore Freelance Ferrara Bologna | Sviluppo Web & AI",
     description:
       "Sviluppatore web freelance specializzato in creazione siti web, gestionali, web app e soluzioni AI. Servizi a Ferrara, Bologna e Emilia-Romagna.",
@@ -85,13 +85,13 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "LocalBusiness",
-              "@id": "https://vesewebdev.vercel.app",
+              "@id": "https://vesewebdev.it",
               name: "Vesewebdev - Programmatore Freelance",
               description:
                 "Sviluppatore web freelance specializzato in creazione siti web, gestionali, web app e soluzioni AI",
-              url: "https://vesewebdev.vercel.app",
-              telephone: "+39-XXX-XXXXXXX", // Da aggiornare
-              email: "info@vesewebdev.com", // Da aggiornare
+              url: "https://vesewebdev.it",
+              telephone: "+39-380-6455771",
+              email: "info@vesewebdev.it",
               areaServed: [
                 {
                   "@type": "City",

@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: "/",
       disallow: ["/api/", "/admin/"],
     },
-    sitemap: "https://vesewebdev.vercel.app/sitemap.xml",
+    sitemap: "https://vesewebdev.it/sitemap.xml",
   };
 }
