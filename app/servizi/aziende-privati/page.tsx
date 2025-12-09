@@ -199,7 +199,7 @@ export default function AziendePrivatiPage() {
                   <p className="text-gray-600">{step.description}</p>
                 </div>
                 {index < process.length - 1 && (
-                  <div className="hidden md:block absolute top-10 right-0 w-3/5 h-0.5 bg-primary transform translate-x-3/5" />
+                  <div className="hidden md:block absolute top-8 right-0 w-3/5 h-0.5 bg-primary transform translate-x-[60%]" />
                 )}
               </div>
             ))}
