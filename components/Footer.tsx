@@ -29,7 +29,7 @@ export default function Footer() {
             <ul className="text-white space-y-2">
               <li>
                 <a
-                  href="#chi-sono"
+                  href="/#chi-sono"
                   className="hover:text-primary transition-colors duration-200"
                 >
                   Chi Sono
@@ -37,7 +37,7 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="#servizi"
+                  href="/#servizi"
                   className="hover:text-primary transition-colors duration-200"
                 >
                   Servizi
@@ -45,7 +45,7 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="#portfolio"
+                  href="/#portfolio"
                   className="hover:text-primary transition-colors duration-200"
                 >
                   Portfolio
@@ -53,7 +53,7 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="#contatti"
+                  href="/#contatti"
                   className="hover:text-primary transition-colors duration-200"
                 >
                   Contatti

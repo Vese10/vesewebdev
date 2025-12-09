@@ -6,11 +6,11 @@ import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const navItems = [
-  { name: "Home", href: "#hero" },
-  { name: "Chi Sono", href: "#chi-sono" },
-  { name: "Servizi", href: "#servizi" },
-  { name: "Portfolio", href: "#portfolio" },
-  { name: "Contatti", href: "#contatti" },
+  { name: "Home", href: "/#hero" },
+  { name: "Chi Sono", href: "/#chi-sono" },
+  { name: "Servizi", href: "/#servizi" },
+  { name: "Portfolio", href: "/#portfolio" },
+  { name: "Contatti", href: "/#contatti" },
 ];
 
 export default function Navbar() {

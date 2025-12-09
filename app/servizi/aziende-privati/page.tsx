@@ -126,7 +126,7 @@ export default function AziendePrivatiPage() {
               Soluzioni digitali su misura per far crescere il tuo business a Ferrara, Bologna e oltre
             </p>
             <a
-              href="#contatti"
+              href="/#contatti"
               className="inline-block bg-black text-white px-8 py-4 rounded-full font-medium hover:shadow-2xl hover:-translate-y-1 transition-all duration-300"
             >
               Richiedi un Preventivo Gratuito
@@ -136,7 +136,7 @@ export default function AziendePrivatiPage() {
       </section>
 
       {/* Services Grid */}
-      <section className="min-h-screen flex items-center justify-center relative overflow-hidden bg-gradient-to-br from-gray-500 via-black to-gray-500">
+      <section className="min-h-screen flex items-center justify-center relative overflow-hidden bg-gradient-to-br from-gray-400 via-black to-gray-400">
         <div className="container mx-auto px-4 max-w-6xl">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4 font-poppins">
@@ -175,7 +175,7 @@ export default function AziendePrivatiPage() {
       </section>
 
       {/* Process */}
-      <section className="min-h-screen flex items-center justify-center relative overflow-hidden bg-gradient-to-tr from-gray-500 via-black to-gray-500">
+      <section className="min-h-screen flex items-center justify-center relative overflow-hidden bg-gradient-to-tr from-gray-400 via-black to-gray-400">
         <div className="container mx-auto px-4 max-w-6xl">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4 font-poppins">
@@ -208,7 +208,7 @@ export default function AziendePrivatiPage() {
       </section>
 
       {/* Benefits */}
-      <section className="min-h-screen flex items-center justify-center relative overflow-hidden bg-gradient-to-br from-gray-500 via-black to-gray-500">
+      <section className="min-h-screen flex items-center justify-center relative overflow-hidden bg-gradient-to-br from-gray-400 via-black to-gray-400">
         <div className="container mx-auto px-4 max-w-6xl">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4 font-poppins">

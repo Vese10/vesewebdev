@@ -120,13 +120,13 @@ export default function WebAgencyPage() {
             </p>
             <div className="flex flex-wrap gap-4">
               <a
-                href="#contatti"
+                href="/#contatti"
                 className="inline-block bg-black text-white px-8 py-4 rounded-full font-medium hover:shadow-2xl hover:-translate-y-1 transition-all duration-300"
               >
                 Iniziamo a Collaborare
               </a>
               <a
-                href="/#portfolio"
+                href="/portfolio"
                 className="inline-block bg-black text-white px-8 py-4 rounded-full font-medium hover:shadow-2xl hover:-translate-y-1 transition-all duration-300"
               >
                 Vedi Portfolio
@@ -137,7 +137,7 @@ export default function WebAgencyPage() {
       </section>
 
       {/* Competenze Tecniche */}
-      <section className="min-h-screen flex items-center justify-center relative overflow-hidden bg-gradient-to-br from-gray-500 via-black to-gray-500">
+      <section className="min-h-screen flex items-center justify-center relative overflow-hidden bg-gradient-to-br from-gray-400 via-black to-gray-400">
         <div className="container mx-auto px-4 max-w-6xl">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4 font-poppins">
@@ -172,7 +172,7 @@ export default function WebAgencyPage() {
       </section>
 
       {/* Tipi di Collaborazione */}
-      <section className="min-h-screen flex items-center justify-center relative overflow-hidden bg-gradient-to-tr from-gray-500 via-black to-gray-500">
+      <section className="min-h-screen flex items-center justify-center relative overflow-hidden bg-gradient-to-tr from-gray-400 via-black to-gray-400">
         <div className="container mx-auto px-4 max-w-6xl">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4 font-poppins">
@@ -207,7 +207,7 @@ export default function WebAgencyPage() {
       </section>
 
       {/* Vantaggi */}
-      <section className="min-h-screen flex items-center justify-center relative overflow-hidden bg-gradient-to-br from-gray-500 via-black to-gray-500">
+      <section className="min-h-screen flex items-center justify-center relative overflow-hidden bg-gradient-to-br from-gray-400 via-black to-gray-400">
         <div className="container mx-auto px-4 max-w-6xl">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4 font-poppins">
@@ -232,7 +232,7 @@ export default function WebAgencyPage() {
       </section>
 
       {/* Processo di Collaborazione */}
-      <section className="min-h-screen flex items-center justify-center relative overflow-hidden bg-gradient-to-tr from-gray-500 via-black to-gray-500">
+      <section className="min-h-screen flex items-center justify-center relative overflow-hidden bg-gradient-to-tr from-gray-400 via-black to-gray-400">
         <div className="container mx-auto px-4 max-w-6xl">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4 font-poppins">

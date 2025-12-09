@@ -35,7 +35,7 @@ export default function PortfolioPreview() {
     <section
       id="portfolio"
       ref={ref}
-      className="min-h-screen flex items-center justify-center relative overflow-hidden bg-gradient-to-tr from-gray-500 via-black to-gray-500"
+      className="min-h-screen flex items-center justify-center relative overflow-hidden bg-gradient-to-tr from-gray-400 via-black to-gray-400"
     >
       <div className="container mx-auto px-4 max-w-6xl">
         <motion.div

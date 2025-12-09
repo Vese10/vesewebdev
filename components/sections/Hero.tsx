@@ -7,7 +7,7 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="min-h-screen flex items-center justify-center relative overflow-hidden bg-gradient-to-br from-gray-500 via-black to-gray-500"
+      className="min-h-screen flex items-center justify-center relative overflow-hidden bg-gradient-to-br from-gray-400 via-black to-gray-400"
     >
       {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden">
@@ -66,14 +66,14 @@ export default function Hero() {
           >
             <a
               href="#contatti"
-              className="group bg-primary text-black px-8 py-4 rounded-full font-medium text-lg hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 flex justify-center items-center space-x-2 w-full md:w-1/4"
+              className="group bg-primary text-black px-8 py-4 rounded-full font-medium text-lg hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 flex justify-center items-center space-x-2 w-full md:w-1/3"
             >
               <span>Iniziamo a Collaborare</span>
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </a>
             <a
               href="#portfolio"
-              className="group bg-primary text-black px-8 py-4 rounded-full font-medium text-lg hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 flex justify-center items-center space-x-2 w-full md:w-1/4"
+              className="group bg-primary text-black px-8 py-4 rounded-full font-medium text-lg hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 flex justify-center items-center space-x-2 w-full md:w-1/3"
             >
               <span>Vedi i Miei Progetti</span>
               <Code className="w-5 h-5" />
