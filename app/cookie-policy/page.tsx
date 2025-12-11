@@ -193,10 +193,10 @@ export default function CookiePolicy() {
               <p>
                 <strong className="text-white">Email:</strong>{" "}
                 <a
-                  href="mailto:info@vesewebdev.it"
+                  href="mailto:veselin.hristov.10@gmail.com"
                   className="text-primary hover:text-primary-light transition-colors"
                 >
-                  info@vesewebdev.it
+                  veselin.hristov.10@gmail.com
                 </a>
               </p>
               <p>

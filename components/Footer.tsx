@@ -140,7 +140,7 @@ export default function Footer() {
               </li>
               <li className="flex items-center space-x-2">
                 <Mail size={18} className="text-primary" />
-                <a href="mailto:info@vesewebdev.it" className="hover:text-primary transition-colors duration-200">info@vesewebdev.it</a>
+                <a href="mailto:veselin.hristov.10@gmail.com" className="hover:text-primary transition-colors duration-200">veselin.hristov.10@gmail.com</a>
               </li>
             </ul>
             {/* Social Links */}

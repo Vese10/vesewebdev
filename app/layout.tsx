@@ -91,7 +91,7 @@ export default function RootLayout({
                 "Sviluppatore web freelance specializzato in creazione siti web, gestionali, web app e soluzioni AI",
               url: "https://vesewebdev.it",
               telephone: "+39-380-6455771",
-              email: "info@vesewebdev.it",
+              email: "veselin.hristov.10@gmail.com",
               areaServed: [
                 {
                   "@type": "City",

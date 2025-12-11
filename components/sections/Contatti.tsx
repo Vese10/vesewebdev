@@ -151,10 +151,10 @@ export default function Contatti() {
                 <div>
                   <h4 className="font-semibold text-white">Email</h4>
                   <a
-                    href="mailto:info@vesewebdev.it"
+                    href="mailto:veselin.hristov.10@gmail.com"
                     className="text-primary hover:text-accent transition-colors"
                   >
-                    info@vesewebdev.it
+                    veselin.hristov.10@gmail.com
                   </a>
                 </div>
               </div>
