@@ -72,6 +72,15 @@ const personalProjects: Project[] = [
     alt: "Web app Meditate Like a Buddah",
     tags: ["Web app", "JavaScript", "Side project"],
   },
+  {
+    title: "Trade Tracker",
+    description:
+      "Web App sviluppata per il tracciamento di trade giornalieri.",
+    href: "https://tradetracker.vesewebdev.it/",
+    image: "/trade-tracker.png",
+    alt: "Web app Trade Tracker",
+    tags: ["Web app", "TypeScript", "Side project"],
+  },
 ];
 
 const collabProjects: Project[] = [
