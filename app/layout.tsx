@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import { Inter, Poppins } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
@@ -65,9 +66,7 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
-  verification: {
-    google: "your-google-site-verification-code", // Da aggiornare con il codice reale
-  },
+
 };
 
 export default function RootLayout({
@@ -78,6 +77,9 @@ export default function RootLayout({
   return (
     <html lang="it" className={`${inter.variable} ${poppins.variable}`}>
       <head>
+        <link rel="preconnect" href="https://consent.cookiebot.com" />
+        <link rel="preconnect" href="https://consentcdn.cookiebot.com" />
+
         {/* JSON-LD Schema Markup for Local Business */}
         <script
           type="application/ld+json"
@@ -130,7 +132,12 @@ export default function RootLayout({
           IMPORTANT: Replace 'YOUR_SETTINGS_ID_HERE' with your actual Usercentrics Settings ID
           Find it in: Usercentrics Dashboard → Implementation → Web
         */}
-        <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="2e91db8f-dea5-489a-b32c-d645d6f1fa38" type="text/javascript"></script>
+        <Script
+          id="Cookiebot"
+          src="https://consent.cookiebot.com/uc.js"
+          data-cbid="2e91db8f-dea5-489a-b32c-d645d6f1fa38"
+          strategy="afterInteractive"
+        />
       </head>
       <body className="font-sans antialiased">
         <RecaptchaProvider>

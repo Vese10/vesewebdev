@@ -21,8 +21,8 @@ export default function RecaptchaProvider({
     <GoogleReCaptchaProvider
       reCaptchaKey={recaptchaKey}
       scriptProps={{
-        async: false,
-        defer: false,
+        async: true,
+        defer: true,
         appendTo: "head",
         nonce: undefined,
       }}

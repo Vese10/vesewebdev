@@ -38,7 +38,7 @@ export default function ChiSono() {
             className="relative"
           >
             <div className="aspect-square rounded-2xl bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center">
-              <Image src="/profile.jpg" alt="Profile" fill className="object-cover rounded-2xl" />
+              <Image src="/profile.jpg" alt="Veselin Hristov - Programmatore Web Freelance" fill className="object-cover rounded-2xl" />
             </div>
             <div className="absolute -bottom-6 -right-6 bg-white p-4 rounded-xl shadow-lg border border-gray-700">
               <div className="flex items-center space-x-2">
