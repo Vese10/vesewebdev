@@ -9,7 +9,7 @@ export default function Cta() {
           Posso aiutarti a realizzare il sito o la web app che desideri.
         </p>
         <a
-          href="https://wa.me/393518301400"
+          href="https://wa.me/393806455771"
           className="inline-block bg-black text-white px-8 py-4 rounded-full font-medium hover:shadow-2xl hover:-translate-y-1 transition-all duration-300"
         >
           Scrivimi su WhatsApp
